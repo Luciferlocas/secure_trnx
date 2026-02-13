@@ -119,7 +119,7 @@ export default function Home() {
       if (success) {
         setRecord(data);
       } else {
-        setError(error?.message as string);
+        setError(error?.error as string);
       }
     } catch (err: unknown) {
       setError(

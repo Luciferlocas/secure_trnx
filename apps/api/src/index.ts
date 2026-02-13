@@ -10,7 +10,7 @@ dotenv.config();
 const fastify = Fastify({ logger: true });
 
 fastify.register(cors, {
-  origin: ["http://localhost:3000"],
+  origin: process.env.ALLOWED_ORIGINS?.split(",") || [],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 });
