@@ -1,0 +1,25 @@
+{
+  "name": "@repo/api-client",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/index.js",
+  "description": "This package holds all the API request logic",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit",
+    "test": "tsx --test src/index.test.ts"
+  },
+  "dependencies": {
+    "@repo/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.39.1",
+    "tsx": "^4.7.1",
+    "typescript": "5.9.2"
+  }
+}
